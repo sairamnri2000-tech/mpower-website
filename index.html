@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MPOWER GROUP AUSTRALIA | Expert Construction Services</title>
+<meta name="description" content="MPOWER GROUP AUSTRALIA - expert construction services in Australia. Quality, transparency and exceptional workmanship. Based in Dickson, ACT.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Playfair+Display:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#0a0a0a; --dark:#141414; --card:#1c1c1c; --yellow:#f5b800; --yellow-dark:#d49c00;
+    --text:#e8e8e8; --muted:#a3a3a3; --line:#2a2a2a; --white:#fff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Source Sans 3","Segoe UI",Arial,sans-serif;background:var(--black);color:var(--text);line-height:1.7}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1150px;margin:0 auto;padding:0 22px}
+
+  /* ---------- Header ---------- */
+  header{position:sticky;top:0;z-index:20;background:rgba(10,10,10,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:16px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand-mark{width:44px;height:44px;border:2px solid var(--yellow);display:flex;align-items:center;justify-content:center;
+    font-family:"Montserrat",sans-serif;font-weight:800;color:var(--yellow);font-size:1.3rem;flex-shrink:0}
+  .brand-text b{display:block;font-family:"Montserrat",sans-serif;font-weight:800;letter-spacing:3px;font-size:1rem;color:var(--white);line-height:1.2}
+  .brand-text small{font-family:"Montserrat",sans-serif;letter-spacing:2px;font-size:.66rem;color:var(--yellow);font-weight:600}
+  nav{display:flex;align-items:center;gap:26px}
+  nav a{font-family:"Montserrat",sans-serif;font-weight:600;font-size:.85rem;letter-spacing:1px;color:var(--muted);text-transform:uppercase}
+  nav a:hover{color:var(--yellow)}
+  nav .nav-cta{background:var(--yellow);color:var(--black);padding:10px 18px}
+  nav .nav-cta:hover{background:var(--yellow-dark);color:var(--black)}
+
+  /* ---------- Hero ---------- */
+  .hero{position:relative;min-height:620px;display:flex;align-items:center;
+    background:linear-gradient(90deg,rgba(10,10,10,.92) 0%,rgba(10,10,10,.75) 50%,rgba(10,10,10,.35) 100%),
+    url("https://images.pexels.com/photos/7168457/pexels-photo-7168457.jpeg?auto=compress&cs=tinysrgb&w=1800") center/cover no-repeat}
+  .hero-inner{padding:100px 0;max-width:720px}
+  .kicker{display:inline-block;font-family:"Montserrat",sans-serif;font-weight:700;font-size:.78rem;letter-spacing:3px;color:var(--yellow);
+    border-left:3px solid var(--yellow);padding-left:12px;text-transform:uppercase}
+  .hero h1{font-family:"Playfair Display",serif;font-weight:700;font-size:clamp(2.4rem,5.5vw,4rem);line-height:1.12;color:var(--white);margin:20px 0 18px}
+  .hero h2{font-family:"Montserrat",sans-serif;font-weight:700;font-size:clamp(1.1rem,2.4vw,1.45rem);color:var(--white)}
+  .hero p{font-size:1.15rem;color:#d0d0d0;margin-top:8px}
+  .btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+  .btn{display:inline-block;font-family:"Montserrat",sans-serif;font-weight:700;letter-spacing:1.5px;font-size:.85rem;text-transform:uppercase;padding:15px 30px;transition:.2s}
+  .btn-yellow{background:var(--yellow);color:var(--black)}
+  .btn-yellow:hover{background:var(--yellow-dark)}
+  .btn-outline{border:2px solid var(--white);color:var(--white)}
+  .btn-outline:hover{background:var(--white);color:var(--black)}
+  .btn-white{background:var(--white);color:var(--black)}
+  .btn-white:hover{background:var(--yellow)}
+
+  /* ---------- Sections ---------- */
+  section{padding:100px 0}
+  .alt{background:var(--dark)}
+  .eyebrow{font-family:"Montserrat",sans-serif;font-weight:700;font-size:.78rem;letter-spacing:3px;color:var(--yellow);text-transform:uppercase}
+  h3.title{font-family:"Playfair Display",serif;font-weight:700;font-size:clamp(1.9rem,4vw,2.8rem);color:var(--white);margin:10px 0 16px;line-height:1.2}
+  .bar{width:60px;height:3px;background:var(--yellow);margin:0 0 24px}
+  .center{text-align:center}
+  .center .bar{margin:0 auto 24px}
+
+  /* Mission */
+  .mission{display:grid;grid-template-columns:1.05fr 1fr;gap:60px;align-items:center}
+  .mission-img{position:relative}
+  .mission-img img{width:100%;height:440px;object-fit:cover}
+  .mission-img::after{content:"";position:absolute;left:-16px;bottom:-16px;width:45%;height:45%;border:3px solid var(--yellow);z-index:-1}
+  .mission p{color:var(--muted);font-size:1.1rem}
+  .mission p strong{color:var(--white)}
+
+  /* Values */
+  .values{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:50px}
+  .vcard{background:var(--card);overflow:hidden;transition:.25s;border-bottom:3px solid transparent}
+  .vcard:hover{transform:translateY(-6px);border-bottom-color:var(--yellow)}
+  .vcard .img{height:210px;overflow:hidden}
+  .vcard img{width:100%;height:100%;object-fit:cover;filter:grayscale(25%);transition:.5s}
+  .vcard:hover img{transform:scale(1.06);filter:none}
+  .vcard .body{padding:26px}
+  .vcard .num{font-family:"Montserrat",sans-serif;font-weight:800;color:var(--yellow);font-size:.85rem;letter-spacing:2px}
+  .vcard h4{font-family:"Montserrat",sans-serif;font-weight:700;color:var(--white);font-size:1.15rem;margin:6px 0 8px}
+  .vcard p{color:var(--muted);font-size:.98rem}
+
+  /* Quote band */
+  .band{background:var(--yellow);color:var(--black);padding:60px 0}
+  .band-inner{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+  .band h3{font-family:"Playfair Display",serif;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.25;max-width:640px}
+  .band .btn{background:var(--black);color:var(--white)}
+  .band .btn:hover{background:#333}
+
+  /* Contact */
+  .contact{display:grid;grid-template-columns:1fr 1.15fr;gap:50px;align-items:stretch}
+  .contact-info h4{font-family:"Montserrat",sans-serif;color:var(--white);font-size:1.25rem;margin-bottom:12px}
+  .contact-info p{color:var(--muted);margin-bottom:26px}
+  .info-row{display:flex;gap:16px;align-items:flex-start;padding:18px 0;border-top:1px solid var(--line)}
+  .info-row svg{width:24px;height:24px;stroke:var(--yellow);fill:none;stroke-width:2;flex-shrink:0;margin-top:3px}
+  .info-row b{display:block;font-family:"Montserrat",sans-serif;color:var(--white);font-size:.85rem;letter-spacing:1.5px;text-transform:uppercase}
+  .info-row span{color:var(--muted)}
+  .contact-info .btns{margin-top:24px}
+  .map{min-height:380px;border:1px solid var(--line)}
+  .map iframe{width:100%;height:100%;min-height:380px;border:0;filter:grayscale(40%) contrast(1.05)}
+
+  /* Footer */
+  footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.92rem}
+  .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+
+  /* Responsive */
+  @media (max-width:950px){
+    .mission,.contact{grid-template-columns:1fr}
+    .values{grid-template-columns:1fr 1fr}
+    .mission-img img{height:340px}
+  }
+  @media (max-width:640px){
+    nav a:not(.nav-cta){display:none}
+    .brand-text b{font-size:.82rem;letter-spacing:2px}
+    .values{grid-template-columns:1fr}
+    .hero{min-height:540px}
+    section{padding:70px 0}
+    .mission-img::after{display:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand" aria-label="MPOWER GROUP AUSTRALIA home">
+      <span class="brand-mark">M</span>
+      <span class="brand-text"><b>MPOWER GROUP AUSTRALIA</b><small>ABN 36 694 585 512</small></span>
+    </a>
+    <nav>
+      <a href="#mission">About</a>
+      <a href="#values">Why Us</a>
+      <a href="#contact" class="nav-cta">Free Quote</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<div class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-inner">
+      <span class="kicker">Mpowering Your Business Future</span>
+      <h1>Expert Construction Services in Australia</h1>
+      <p>Building trust with quality construction solutions.</p>
+      <div class="btns">
+        <a href="#contact" class="btn btn-yellow">Get a Free Quote</a>
+        <a href="#mission" class="btn btn-outline">Our Mission</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= MISSION ================= -->
+<section id="mission">
+  <div class="wrap mission">
+    <div class="mission-img">
+      <img src="https://images.pexels.com/photos/8960992/pexels-photo-8960992.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Construction professional reviewing work on site">
+    </div>
+    <div>
+      <div class="eyebrow">Who We Are</div>
+      <h3 class="title">Our Mission</h3>
+      <div class="bar"></div>
+      <p>At <strong>MPOWER GROUP AUSTRALIA</strong>, our mission is to deliver top-quality construction services that meet the highest industry standards.</p>
+      <p style="margin-top:14px">We are committed to fostering strong relationships with our clients through transparency and exceptional workmanship.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VALUES ================= -->
+<section id="values" class="alt">
+  <div class="wrap">
+    <div class="center">
+      <div class="eyebrow">Why Choose Us</div>
+      <h3 class="title">Built on Strong Foundations</h3>
+      <div class="bar"></div>
+    </div>
+    <div class="values">
+      <div class="vcard">
+        <div class="img"><img src="https://images.pexels.com/photos/5811993/pexels-photo-5811993.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Building under construction"></div>
+        <div class="body">
+          <span class="num">01</span>
+          <h4>Top Quality</h4>
+          <p>Construction delivered to the highest industry standards on every project.</p>
+        </div>
+      </div>
+      <div class="vcard">
+        <div class="img"><img src="https://images.pexels.com/photos/34670930/pexels-photo-34670930/free-photo-of-construction-workers-in-safety-gear-at-site.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Construction team on site"></div>
+        <div class="body">
+          <span class="num">02</span>
+          <h4>Transparency</h4>
+          <p>Clear communication with you from the first quote until the job is done.</p>
+        </div>
+      </div>
+      <div class="vcard">
+        <div class="img"><img src="https://images.pexels.com/photos/8961156/pexels-photo-8961156.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Construction worker on site"></div>
+        <div class="body">
+          <span class="num">03</span>
+          <h4>Exceptional Workmanship</h4>
+          <p>Skilled, careful work that builds lasting trust with our clients.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BAND ================= -->
+<div class="band">
+  <div class="wrap band-inner">
+    <h3>Planning a project? Visit us for a free quote.</h3>
+    <a href="https://www.google.com/maps/dir/?api=1&destination=490+Northbourne+Avenue,+Dickson+ACT+2602,+Australia" target="_blank" rel="noopener" class="btn">Get Directions</a>
+  </div>
+</div>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:50px">
+      <div class="eyebrow">Get In Touch</div>
+      <h3 class="title">Contact Us</h3>
+      <div class="bar"></div>
+    </div>
+    <div class="contact">
+      <div class="contact-info">
+        <h4>Better yet, see us in person!</h4>
+        <p>We stay in constant communication with our customers until the job is done. To get a free quote, or if you have questions or special requests, just drop us a line.</p>
+
+        <div class="info-row">
+          <svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0119 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+          <div><b>Address</b><span>490 Northbourne Avenue, Dickson ACT, Australia</span></div>
+        </div>
+        <div class="info-row">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>
+          <div><b>Business</b><span>MPOWER GROUP AUSTRALIA &middot; ABN 36 694 585 512</span></div>
+        </div>
+
+        <div class="btns">
+          <!-- TODO: when the business email/phone is available, add:
+               <a href="mailto:EMAIL" class="btn btn-yellow">Drop Us a Line!</a> -->
+          <a href="https://www.google.com/maps/dir/?api=1&destination=490+Northbourne+Avenue,+Dickson+ACT+2602,+Australia" target="_blank" rel="noopener" class="btn btn-yellow">Get Directions</a>
+        </div>
+      </div>
+      <div class="map">
+        <iframe title="Map to MPOWER GROUP AUSTRALIA" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=490+Northbourne+Avenue,+Dickson+ACT,+Australia&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap foot">
+    <span>Copyright &copy; 2026 MPOWER GROUP AUSTRALIA - All Rights Reserved.</span>
+    <span>ABN 36 694 585 512 &middot; <a href="privacy.html" style="color:#f5b800">Privacy</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
